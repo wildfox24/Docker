@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "sadmin"
+      POSTGRES_USER: "sadmin"
+      POSTGRES_PASSWORD: "trep@let_dba"
+    ports:
+      - "5432:5432"

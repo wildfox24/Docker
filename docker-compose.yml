@@ -1,0 +1,81 @@
+version: "3"
+services:
+  queue:
+    image: rabbitmq:3.7-management-alpine
+
+  redis:
+    image: redis:5-alpine
+
+  api:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: &env .env
+    environment:
+      SERVICE: api
+    ports:
+      - ${API_PORT:-8080}:${API_PORT:-8080}
+
+  client:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: client
+
+  classifier:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: classifier
+
+  multidocnet:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: multidocnet
+
+  heuristics:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: heuristics
+
+  wordnet:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: wordnet
+
+  ocr:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: ocr
+
+  fieldnet:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: fieldnet
+
+  crop_classifier:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: crop_classifier
+
+  fulltext:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: fulltext
+
+  face:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: face
+
+  checkbox_segm:
+    image: dbrainbinaries/docr:$VERSION
+    env_file: *env
+    environment:
+      SERVICE: checkbox_segm

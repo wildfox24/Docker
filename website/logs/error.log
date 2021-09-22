@@ -1,0 +1,67 @@
+2021/08/23 11:50:51 [notice] 1#1: using the "epoll" event method
+2021/08/23 11:50:51 [notice] 1#1: nginx/1.21.1
+2021/08/23 11:50:51 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/08/23 11:50:51 [notice] 1#1: OS: Linux 4.19.0-17-amd64
+2021/08/23 11:50:51 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/08/23 11:50:51 [notice] 1#1: start worker processes
+2021/08/23 11:50:51 [notice] 1#1: start worker process 24
+2021/08/23 11:50:51 [notice] 1#1: start worker process 25
+2021/08/23 11:50:51 [notice] 1#1: start worker process 26
+2021/08/23 11:50:51 [notice] 1#1: start worker process 27
+2021/08/23 11:51:27 [error] 24#24: *1 open() "/var/www/hello.test/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: hello.test, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8080", referrer: "http://127.0.0.1:8080/"
+2021/08/23 11:55:03 [error] 24#24: *6 open() "/var/www/hello.test/phpmyadmin" failed (2: No such file or directory), client: 172.18.0.1, server: hello.test, request: "GET /phpmyadmin HTTP/1.1", host: "127.0.0.1:8080"
+2021/08/23 11:56:09 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/08/23 11:56:09 [notice] 25#25: gracefully shutting down
+2021/08/23 11:56:09 [notice] 26#26: gracefully shutting down
+2021/08/23 11:56:09 [notice] 25#25: exiting
+2021/08/23 11:56:09 [notice] 26#26: exiting
+2021/08/23 11:56:09 [notice] 25#25: exit
+2021/08/23 11:56:09 [notice] 26#26: exit
+2021/08/23 11:56:09 [notice] 27#27: gracefully shutting down
+2021/08/23 11:56:09 [notice] 27#27: exiting
+2021/08/23 11:56:09 [notice] 27#27: exit
+2021/08/23 11:56:09 [notice] 24#24: gracefully shutting down
+2021/08/23 11:56:09 [notice] 24#24: exiting
+2021/08/23 11:56:09 [notice] 24#24: exit
+2021/08/23 11:56:09 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/08/23 11:56:09 [notice] 1#1: worker process 25 exited with code 0
+2021/08/23 11:56:09 [notice] 1#1: signal 29 (SIGIO) received
+2021/08/23 11:56:09 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/08/23 11:56:09 [notice] 1#1: worker process 24 exited with code 0
+2021/08/23 11:56:09 [notice] 1#1: worker process 26 exited with code 0
+2021/08/23 11:56:09 [notice] 1#1: worker process 27 exited with code 0
+2021/08/23 11:56:09 [notice] 1#1: exit
+2021/08/23 12:07:27 [notice] 1#1: using the "epoll" event method
+2021/08/23 12:07:27 [notice] 1#1: nginx/1.21.1
+2021/08/23 12:07:27 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/08/23 12:07:27 [notice] 1#1: OS: Linux 4.19.0-17-amd64
+2021/08/23 12:07:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/08/23 12:07:27 [notice] 1#1: start worker processes
+2021/08/23 12:07:27 [notice] 1#1: start worker process 22
+2021/08/23 12:07:27 [notice] 1#1: start worker process 23
+2021/08/23 12:07:27 [notice] 1#1: start worker process 24
+2021/08/23 12:07:27 [notice] 1#1: start worker process 25
+2021/08/23 12:07:41 [error] 22#22: *1 open() "/var/www/hello.test/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: hello.test, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8180", referrer: "http://127.0.0.1:8180/"
+2021/08/23 12:09:44 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/08/23 12:09:44 [notice] 25#25: gracefully shutting down
+2021/08/23 12:09:44 [notice] 24#24: gracefully shutting down
+2021/08/23 12:09:44 [notice] 25#25: exiting
+2021/08/23 12:09:44 [notice] 24#24: exiting
+2021/08/23 12:09:44 [notice] 25#25: exit
+2021/08/23 12:09:44 [notice] 24#24: exit
+2021/08/23 12:09:44 [notice] 22#22: gracefully shutting down
+2021/08/23 12:09:44 [notice] 22#22: exiting
+2021/08/23 12:09:44 [notice] 22#22: exit
+2021/08/23 12:09:44 [notice] 23#23: gracefully shutting down
+2021/08/23 12:09:44 [notice] 23#23: exiting
+2021/08/23 12:09:44 [notice] 23#23: exit
+2021/08/23 12:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/08/23 12:09:44 [notice] 1#1: worker process 25 exited with code 0
+2021/08/23 12:09:44 [notice] 1#1: signal 29 (SIGIO) received
+2021/08/23 12:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2021/08/23 12:09:44 [notice] 1#1: worker process 22 exited with code 0
+2021/08/23 12:09:44 [notice] 1#1: worker process 23 exited with code 0
+2021/08/23 12:09:44 [notice] 1#1: signal 29 (SIGIO) received
+2021/08/23 12:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/08/23 12:09:44 [notice] 1#1: worker process 24 exited with code 0
+2021/08/23 12:09:44 [notice] 1#1: exit
