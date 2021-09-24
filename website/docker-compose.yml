@@ -5,7 +5,7 @@ services:
         image: nginx:latest
         # маршрутизируем порты
         ports:
-            - "8180:80"
+            - "8100:80"
         # монтируем директории, слева директории на основной машине, справа - куда они монтируются в контейнере
         volumes:
             - ./hosts:/etc/nginx/conf.d
@@ -13,10 +13,10 @@ services:
             - ./logs:/var/log/nginx
         # nginx должен общаться с php контейнером
         links:
-            - php
-    php:
+            - php-fpm
+    php-fpm:
         # у нас свой образ для PHP, указываем путь к нему и говорим что его надо собрать
-        build: ./images/php
+        build: ./images/php-fpm
         # этот образ будет общаться с mysql
         links:
             - mysql
@@ -31,17 +31,17 @@ services:
             - ./mysql:/var/lib/mysql
         # задаем пароль для root пользователя
         environment:
-            MYSQL_ROOT_PASSWORD: secret
-    pma:
-      # используем последний стабильный образ phpmyadmin
-        image: phpmyadmin/phpmyadmin
-        restart: always
-        links:
-            - mysql:mysql
-        ports:
-            - 8183:80
-        environment:
-            # прописываем название нашего MySQL хоста
-            PMA_HOST: mysql
-            MYSQL_USERNAME: root
-            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: gren@der_dba
+#    pma:
+#      # используем последний стабильный образ phpmyadmin
+#        image: phpmyadmin/phpmyadmin
+#        restart: always
+#        links:
+#            - mysql:mysql
+#        ports:
+#            - 8183:80
+#        environment:
+#            # прописываем название нашего MySQL хоста
+#            PMA_HOST: mysql
+#            MYSQL_USERNAME: root
+#            MYSQL_ROOT_PASSWORD: secret
